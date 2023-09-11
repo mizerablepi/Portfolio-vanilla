@@ -41,6 +41,7 @@ body {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  object-position: top;
 }
 .hero-name {
   position: absolute;
@@ -157,11 +158,11 @@ body {
   width: 2.2rem;
 }
 .contact-image {
-  background-image: url("./images/pexels-amine-m'siouri-18263079.jpg");
+  background-image: url("./images/IMG20230214132649.jpg");
   height: 20rem;
   background-size: cover;
   margin-top: 3rem;
-  background-position: center;
+  background-position: top;
 }
 
 @media (min-width: 426px) {
@@ -183,7 +184,8 @@ body {
     top: 0.5rem;
     left: 0rem;
     font-size: 2rem;
-    width: min(50vw, 20rem);
+    /* width: min(50vw, 20rem); */
+    width: 300px;
     color: white;
     text-align: end;
   }
