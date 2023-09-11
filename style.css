@@ -6,10 +6,30 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.draw {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -100;
+}
+.rectangle {
+  background-color: #0891b2;
+  height: 20vh;
+}
+.triangle {
+  border-top: 22vh solid #0891b2;
+  border-right: 98vw solid transparent;
 }
 
 .upper-content {
   padding: 1rem 1.5rem 0 1.5rem;
+}
+
+.intro {
+  background-color: white;
 }
 
 .hero {
@@ -61,6 +81,7 @@ body {
   display: grid;
   column-gap: 2rem;
   grid-template-columns: repeat(1, minmax(10rem, 1fr));
+  margin-top: 1rem;
 }
 #my-works {
   grid-column: 1 / -1;
@@ -98,6 +119,7 @@ body {
   background-color: #0891b2;
   color: white;
   font-weight: 300;
+  align-self: stretch;
 }
 .inset-text {
   padding: 0 1rem;
@@ -162,7 +184,7 @@ body {
     left: 0rem;
     font-size: 2rem;
     width: min(50vw, 20rem);
-    color: #b22208;
+    color: white;
     text-align: end;
   }
   .about {
@@ -171,7 +193,7 @@ body {
   #about-title {
     text-align: center;
   }
-  #contact-links {
+  #about-links {
     display: none;
   }
   .project {
@@ -201,5 +223,67 @@ body {
   }
   .contact-icon {
     display: block;
+  }
+}
+@media (min-width: 769px) {
+  .upper-content {
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro {
+    display: flex;
+    max-width: none;
+    margin-left: 7rem;
+    margin-top: 2rem;
+  }
+  .hero {
+    top: 2rem;
+    left: -4rem;
+    float: none;
+    display: block;
+    flex-basis: 90rem;
+    width: 0;
+    height: 15rem;
+  }
+  .hero-name {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    color: white;
+    font-weight: 400;
+    font-size: 2.6rem;
+    text-align: start;
+    width: 100%;
+  }
+  .about {
+    padding-bottom: 1rem;
+  }
+  #about-title {
+    text-align: start;
+  }
+  #about-links {
+    display: flex;
+    justify-content: end;
+  }
+  .project {
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    margin-top: 5rem;
+  }
+  .project-title {
+    font-size: 1.2rem;
+  }
+  .project-card p {
+    font-size: 1rem;
+  }
+  .project-logo {
+    width: 1.5rem;
+  }
+  .contact {
+    justify-content: center;
+  }
+  .contact-image {
+    width: min(85%, 33rem);
   }
 }
